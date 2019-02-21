@@ -1,0 +1,1 @@
+FullStack CRUD application utilizing M.E.R.N Stack (Mongo.db, Express, React, Node.js)
