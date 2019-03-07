@@ -10,7 +10,7 @@ const router = express.Router();
 
 // DB Setup with MongoDB
 
-const dbRoute = "mongodb+srv://mern-app:mern-app@sandbox-ovxzs.mongodb.net/test?retryWrites=true"
+const dbRoute = "mongodb+srv://mern-app:leonelita9@sandbox-ovxzs.mongodb.net/test?retryWrites=true"
 
 //connects our back end code to the database
 
@@ -29,7 +29,7 @@ db.on('error', console.error.bind(console, "MongoDB connection error:"));
 
 // this part is optional. It is made for logging and
 // bodyParser, parses the request made into readable Json Format
-app.use(bodyParser.urlencoded({extend: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 app.use(logger("dev"));
 
