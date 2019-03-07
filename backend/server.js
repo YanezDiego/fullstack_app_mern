@@ -10,7 +10,7 @@ const router = express.router();
 
 // DB Setup with MongoDB
 
-const dbRoute = "mongodb://jelo:a9bc839993@ds151382.mlab.com:51382/jelotest";
+const dbRoute = "mongodb+srv://mern-app:mern-app@sandbox-ovxzs.mongodb.net/test?retryWrites=true"
 
 //connects our back end code to the database
 
