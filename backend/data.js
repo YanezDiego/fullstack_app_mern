@@ -12,4 +12,4 @@ const DataSchema = new Schema(
 );
 
 // Exporting the schema so it can be modified via Node.js
-module.exports = mongoose.model("Data", "DataSchema")
+module.exports = mongoose.model("Data", DataSchema)
