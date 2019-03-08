@@ -12,6 +12,18 @@ class App extends Component {
     objectToUpdate: null
   };
 
+    // when the component mounts we first call our get data from DB funciton
+    // then incorporate a polling system to see if our db has changed and implement
+    // the changes to our UI
+  componentDidMount(){
+    this.getDataFromDb();
+    if(!this.state.intervalIsSet){
+      let interval = setInterval(this.getDataFromDb, 1000)
+      this.setState({intervalIsSet: interval})
+    }
+  };
+
+
   render() {
     return (
       <div>
