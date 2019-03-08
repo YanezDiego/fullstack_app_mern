@@ -32,7 +32,27 @@ class App extends Component {
     }
   }
 
-  
+
+  // Gets data from DB.
+  getDataFromDb = () => {
+    fetch('http//localhost:3001/api/getData')
+    .then(data => data.json())
+    .then(resp => this.setState({data: resp.data}))
+  }
+
+  // post data to DB
+  postDataToDb = message => {
+    let currentIds = this.state.data.map(data => data.id)
+    let idToBeAdded = 0
+    while( currentIds.includes(idToBeAdded)){
+      ++idToBeAdded;
+    }
+
+    axios.post("http//localhost:3001/api/putData", {
+      id: idToBeAdded,
+      message: message
+    });
+  }
 
   render() {
     return (
